@@ -7,6 +7,7 @@
       <e p="MailDiary" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Commands" t="Include">
+          <e p="Process.cs" t="Include" />
           <e p="Validate.cs" t="Include" />
         </e>
         <e p="MailDiary.csproj" t="IncludeRecursive" />
@@ -19,6 +20,18 @@
         </e>
         <e p="Program.cs" t="Include" />
       </e>
+      <e p="MailDiary.ImapConnector" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ImapConnector.cs" t="Include" />
+        <e p="MailDiary.ImapConnector.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="MailDiary.ImapConnector.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="MailDiary.sln" t="IncludeFlat" />
       <e p="MailDiary.Types" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -30,6 +43,10 @@
         </e>
         <e p="Content" t="Include">
           <e p="Incoming.cs" t="Include" />
+        </e>
+        <e p="Mail" t="Include">
+          <e p="IMailConnector.cs" t="Include" />
+          <e p="MailMessage.cs" t="Include" />
         </e>
         <e p="MailDiary.Types.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">

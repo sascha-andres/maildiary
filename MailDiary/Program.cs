@@ -26,6 +26,9 @@ namespace MailDiary
 
       app.Command( "validate",
                   ( command ) => { command.OnExecute( () => Validate.RunCommand( app, configOption, command ) ); } );
+      
+      app.Command( "process",
+                  ( command ) => { command.OnExecute( () => Process.RunCommand( app, configOption, command ) ); } );
 
       try {
         app.Execute( args );

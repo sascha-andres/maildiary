@@ -5,28 +5,29 @@ namespace MailDiary.Commands
 {
   using System;
   using Microsoft.Extensions.CommandLineUtils;
-  using Types;
   using Types.Configuration;
 
   public static class Validate
   {
-    public static int RunCommand( CommandLineApplication app, CommandOption configOption, CommandLineApplication validate )
+    public static int RunCommand( CommandLineApplication app, CommandOption configOption,
+                                  CommandLineApplication validate )
     {
       var cfg = configOption.Value();
       if ( string.IsNullOrEmpty( cfg ) ) {
-        Console.WriteLine("No configuration path provided");
+        Console.WriteLine( "No configuration path provided" );
         return 1;
       }
-      
-      Console.WriteLine($"Using {cfg}");
+
+      Console.WriteLine( $"Using {cfg}" );
       var config = Configuration.FromYamlFile( cfg );
       try {
         config.Validate();
-        Console.WriteLine("configuration validated successfully");
+        Console.WriteLine( "configuration validated successfully" );
       } catch ( Exception ex ) {
-        Console.WriteLine($"Error in configuration: {ex.Message}\n{ex.InnerException.Message}");
+        Console.WriteLine( $"Error in configuration: {ex.Message}\n{ex.InnerException.Message}" );
         return 1;
       }
+
       return 0;
     }
   }

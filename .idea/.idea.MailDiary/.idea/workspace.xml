@@ -13,8 +13,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: add program and configuration lib">
+    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: add markdown base path option">
+      <change afterPath="$PROJECT_DIR$/MailDiary.Types/InvalidConfigurationException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MailDiary.Types/Processing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary.Types/MailDiary.Types.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/MailDiary.Types.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +36,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3A47EFC-D84A-4DF7-9ACB-B8F372AD17E8/c5/845f8995/IDeserializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/66/Char.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/dev/sascha/MailDiary/MailDiary.Types/Configuration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/36/String.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Class1.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Types/InvalidConfigurationException.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Types/Processing.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" />
       </list>
     </option>
   </component>
@@ -52,6 +63,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="ics" />
   </component>
   <component name="RunManager">
@@ -83,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598164851547</updated>
       <workItem from="1598164856794" duration="175000" />
-      <workItem from="1598165315600" duration="514000" />
+      <workItem from="1598165315600" duration="1878000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1598165732884</created>
@@ -99,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598165812010</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add markdown base path option">
+      <created>1598165854807</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598165854807</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +145,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat: initial commit" />
     <MESSAGE value="feat: add program and configuration lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add program and configuration lib" />
+    <MESSAGE value="feat: add markdown base path option" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add markdown base path option" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1026" y="549" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1598165481629">

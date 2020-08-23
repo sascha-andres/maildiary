@@ -26,8 +26,10 @@ namespace MailDiary.Types
         throw new InvalidConfigurationException( "{Server} is not a valid server" );
       if ( Port <= 0 || Port > 65535 )
         throw new InvalidConfigurationException( "{Port} is not a valid port definition" );
-      if ( User.Trim( ' ', '\t' ).Length > 0 && string.IsNullOrWhiteSpace( Password ) )
-        throw new InvalidConfigurationException( "No password for user provided" );
+      if ( !string.IsNullOrEmpty( User ) && User.Trim( ' ', '\t' ).Length > 0) {
+        if ( string.IsNullOrWhiteSpace( Password ) )
+          throw new InvalidConfigurationException( "No password for user provided" );
+      }
     }
   }
 }

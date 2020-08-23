@@ -13,14 +13,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: add markdown base path option">
-      <change afterPath="$PROJECT_DIR$/MailDiary.Types/InvalidConfigurationException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MailDiary.Types/Processing.cs" afterDir="false" />
+    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: move lib to solution folder">
+      <change afterPath="$PROJECT_DIR$/MailDiaryTypes.Tests/MailConfigurationTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary.Types/MailDiary.Types.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/MailDiary.Types.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +29,15 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature/configuration" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/dev/sascha/MailDiary/MailDiary.Types/Configuration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3A47EFC-D84A-4DF7-9ACB-B8F372AD17E8/c5/845f8995/IDeserializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/66/Char.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/dev/sascha/MailDiary/MailDiary.Types/Configuration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/36/String.cs" root0="SKIP_HIGHLIGHTING" />
@@ -46,9 +47,12 @@
       <list>
         <option value="$PROJECT_DIR$/MailDiary.Types/Class1.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/InvalidConfigurationException.cs" />
-        <option value="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Processing.cs" />
+        <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/Class1.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" />
+        <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/ConfigurationTests.cs" />
+        <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/MailConfigurationTests.cs" />
       </list>
     </option>
   </component>
@@ -61,6 +65,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34995976" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30008045" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -71,7 +77,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="ics" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.MailDiary">
     <configuration name="MailDiary" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -100,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598164851547</updated>
       <workItem from="1598164856794" duration="175000" />
-      <workItem from="1598165315600" duration="1878000" />
+      <workItem from="1598165315600" duration="3253000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1598165732884</created>
@@ -123,7 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598165854807</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: add validation">
+      <created>1598167238491</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598167238491</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: move lib to solution folder">
+      <created>1598167344998</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598167344998</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,16 +166,106 @@
     <MESSAGE value="feat: initial commit" />
     <MESSAGE value="feat: add program and configuration lib" />
     <MESSAGE value="feat: add markdown base path option" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add markdown base path option" />
+    <MESSAGE value="feat: add validation" />
+    <MESSAGE value="feat: move lib to solution folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: move lib to solution folder" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1026" y="549" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1598165481629">
+    <state x="1035" y="407" width="1269" height="595" key="#xdebugger.evaluate" timestamp="1598168317895">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="1026" y="549" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598165481629" />
-    <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size" timestamp="1598165395714">
+    <state x="1035" y="407" width="1269" height="595" key="#xdebugger.evaluate/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168317895" />
+    <state x="1026" y="549" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1598167699043">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598165395714" />
+    <state x="1026" y="549" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598167699043" />
+    <state width="897" height="634" key="DebuggerActiveHint" timestamp="1598168205560">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="897" height="634" key="DebuggerActiveHint/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168205560" />
+    <state width="2517" height="523" key="GridCell.Tab.0.bottom" timestamp="1598168365399">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.0.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365399" />
+    <state width="2517" height="523" key="GridCell.Tab.0.center" timestamp="1598168365399">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.0.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365399" />
+    <state width="2517" height="523" key="GridCell.Tab.0.left" timestamp="1598168365399">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.0.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365399" />
+    <state width="2517" height="523" key="GridCell.Tab.0.right" timestamp="1598168365399">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.0.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365399" />
+    <state width="2517" height="523" key="GridCell.Tab.1.bottom" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.1.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.1.center" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.1.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.1.left" timestamp="1598168365399">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.1.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365399" />
+    <state width="2517" height="523" key="GridCell.Tab.1.right" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.1.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.2.bottom" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.2.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.2.center" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.2.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.2.left" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.2.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.2.right" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.2.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.3.bottom" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.3.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.3.center" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.3.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.3.left" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.3.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.3.right" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.3.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.4.bottom" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.4.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.4.center" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.4.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.4.left" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.4.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state width="2517" height="523" key="GridCell.Tab.4.right" timestamp="1598168365400">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="523" key="GridCell.Tab.4.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168365400" />
+    <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size" timestamp="1598167390890">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598167390890" />
   </component>
 </project>

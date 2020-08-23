@@ -1,11 +1,9 @@
 ﻿// MailDiary - MailDiaryTypes.Tests - ProcessingTests.cs
 // created on 2020/08/23
 
-namespace MailDiaryTypes.Tests
+namespace MailDiaryTypes.Tests.Configuration
 {
   using System;
-  using System.Security.Cryptography;
-  using MailDiary.Types;
   using MailDiary.Types.Configuration;
   using Xunit;
   using Xunit.Abstractions;
@@ -20,13 +18,13 @@ namespace MailDiaryTypes.Tests
     }
 
     [Theory]
-    [InlineData( "asd",          true)]
-    [InlineData( "info@test.de", false)]
+    [InlineData( "asd",          true )]
+    [InlineData( "info@test.de", false )]
     public void TestWhiteList( string mail, bool throwException )
     {
       var cfg = new Configuration {
                                     MarkdownBasePath = "/",
-                                    Processing       = new Processing (),
+                                    Processing       = new Processing(),
                                     Mail = new MailConfiguration
                                            { Server = "test.server.de", Port = 1234 }
                                   };
@@ -43,13 +41,13 @@ namespace MailDiaryTypes.Tests
     }
 
     [Theory]
-    [InlineData( "test@info.de", true)]
-    [InlineData( "test@test.de", false)]
+    [InlineData( "test@info.de", true )]
+    [InlineData( "test@test.de", false )]
     public void TestIsWhiteListed( string mail, bool result )
     {
       var cfg = new Configuration {
                                     MarkdownBasePath = "/",
-                                    Processing       = new Processing (),
+                                    Processing       = new Processing(),
                                     Mail = new MailConfiguration
                                            { Server = "test.server.de", Port = 1234 }
                                   };

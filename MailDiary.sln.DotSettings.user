@@ -1,8 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8437987a_002D689f_002D4de6_002D84f7_002D5951a3d2cd98/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ConfigurationTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::B40B243F-5B31-47E9-AF6B-AF1C6F48EFFC::.NETCoreApp,Version=v3.1::MailDiaryTypes.Tests.ConfigurationTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::B40B243F-5B31-47E9-AF6B-AF1C6F48EFFC::.NETCoreApp,Version=v3.1::MailDiaryTypes.Tests.MailConfigurationTests.TestServer&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::B40B243F-5B31-47E9-AF6B-AF1C6F48EFFC::.NETCoreApp,Version=v3.1::MailDiaryTypes.Tests.ProcessingTests&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Project Location="C:\dev\sascha\MailDiary\MailDiaryTypes.Tests" Presentation="&amp;lt;Tests&amp;gt;\&amp;lt;MailDiaryTypes.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

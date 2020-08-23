@@ -1,14 +1,12 @@
 ﻿// MailDiary - MailDiaryTypes.Tests - MailConfigurationTests.cs
 // created on 2020/08/23
 
-using System;
-using MailDiary.Types;
-using Xunit;
-using Xunit.Abstractions;
-
-namespace MailDiaryTypes.Tests
+namespace MailDiaryTypes.Tests.Configuration
 {
+  using System;
   using MailDiary.Types.Configuration;
+  using Xunit;
+  using Xunit.Abstractions;
 
   public class MailConfigurationTests
   {

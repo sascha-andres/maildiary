@@ -28,6 +28,9 @@
           <e p="MailConfiguration.cs" t="Include" />
           <e p="Processing.cs" t="Include" />
         </e>
+        <e p="Content" t="Include">
+          <e p="Incoming.cs" t="Include" />
+        </e>
         <e p="MailDiary.Types.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -39,8 +42,14 @@
       </e>
       <e p="MailDiaryTypes.Tests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="ConfigurationTests.cs" t="Include" />
-        <e p="MailConfigurationTests.cs" t="Include" />
+        <e p="Configuration" t="Include">
+          <e p="ConfigurationTests.cs" t="Include" />
+          <e p="MailConfigurationTests.cs" t="Include" />
+          <e p="ProcessingTests.cs" t="Include" />
+        </e>
+        <e p="Content" t="Include">
+          <e p="IncomingTests.cs" t="Include" />
+        </e>
         <e p="MailDiaryTypes.Tests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -49,7 +58,6 @@
             </e>
           </e>
         </e>
-        <e p="ProcessingTests.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="Tests" t="Include" />

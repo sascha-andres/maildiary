@@ -6,6 +6,7 @@ namespace MailDiary.Commands
   using System;
   using Microsoft.Extensions.CommandLineUtils;
   using Types;
+  using Types.Configuration;
 
   public static class Validate
   {

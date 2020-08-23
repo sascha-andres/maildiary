@@ -6,6 +6,7 @@ namespace MailDiaryTypes.Tests
   using System;
   using System.Security.Cryptography;
   using MailDiary.Types;
+  using MailDiary.Types.Configuration;
   using Xunit;
   using Xunit.Abstractions;
 

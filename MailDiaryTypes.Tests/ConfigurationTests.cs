@@ -2,6 +2,7 @@
 {
   using System;
   using MailDiary.Types;
+  using MailDiary.Types.Configuration;
   using Xunit;
   using Xunit.Abstractions;
 

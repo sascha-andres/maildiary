@@ -1,7 +1,7 @@
 ﻿// MailDiary - MailDiary.Types - Processing.cs
 // created on 2020/08/23
 
-namespace MailDiary.Types
+namespace MailDiary.Types.Configuration
 {
   using System.Collections.Generic;
   using System.Linq;

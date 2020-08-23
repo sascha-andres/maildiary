@@ -8,6 +8,7 @@ using Xunit.Abstractions;
 
 namespace MailDiaryTypes.Tests
 {
+  using MailDiary.Types.Configuration;
 
   public class MailConfigurationTests
   {

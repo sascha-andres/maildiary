@@ -1,8 +1,7 @@
-﻿namespace MailDiary.Types
+﻿namespace MailDiary.Types.Configuration
 {
   using System;
   using System.IO;
-  using System.Net.Http;
   using YamlDotNet.Serialization;
 
   /// <summary>

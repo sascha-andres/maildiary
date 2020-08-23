@@ -1,7 +1,7 @@
 ﻿// MailDiary - MailDiary.Types - InvalidConfigurationException.cs
 // created on 2020/08/23
 
-namespace MailDiary.Types
+namespace MailDiary.Types.Configuration
 {
   using System;
 

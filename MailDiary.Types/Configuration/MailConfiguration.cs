@@ -1,9 +1,8 @@
 ﻿// MailDiary - MailDiary.Types - MailConfiguration.cs
 // created on 2020/08/23
 
-namespace MailDiary.Types
+namespace MailDiary.Types.Configuration
 {
-  using System;
   using YamlDotNet.Serialization;
 
   /// <summary>

@@ -13,16 +13,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: add IsWhiteListed">
-      <change afterPath="$PROJECT_DIR$/MailDiary/Commands/Validate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: add command to validate configuration">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary.Types/InvalidConfigurationException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/InvalidConfigurationException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary.Types/Processing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Processing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary/MailDiary.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/MailDiary.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MailDiary/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,12 +49,12 @@
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/ConfigurationTests.cs" />
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/MailConfigurationTests.cs" />
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/ProcessingTests.cs" />
-        <option value="$PROJECT_DIR$/MailDiary/Program.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/InvalidConfigurationException.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Processing.cs" />
         <option value="$PROJECT_DIR$/MailDiary/Commands/Validate.cs" />
+        <option value="$PROJECT_DIR$/MailDiary/Program.cs" />
       </list>
     </option>
   </component>
@@ -119,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598164851547</updated>
       <workItem from="1598164856794" duration="175000" />
-      <workItem from="1598165315600" duration="5761000" />
+      <workItem from="1598165315600" duration="5887000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1598165732884</created>
@@ -170,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598169213453</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: add command to validate configuration">
+      <created>1598171177081</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598171177081</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,29 +184,29 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 63% 66/176" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 62% 67/177" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 63% 66/176" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 62% 67/177" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Libs 69% 24/77" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 63% 66/176" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 62% 67/177" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Libs 69% 24/77" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="MailDiary.Types 69% 24/77" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 63% 66/176" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 62% 67/177" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Libs 69% 24/77" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="MailDiary.Types 69% 24/77" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="MailDiary.Types 69% 24/77" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 63% 66/176" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 62% 67/177" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="Libs 69% 24/77" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="MailDiary.Types 69% 24/77" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="MailDiary.Types 69% 24/77" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
@@ -238,7 +237,8 @@
     <MESSAGE value="feat: move lib to solution folder" />
     <MESSAGE value="feat: add unit tests" />
     <MESSAGE value="feat: add IsWhiteListed" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add IsWhiteListed" />
+    <MESSAGE value="feat: add command to validate configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add command to validate configuration" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598170408805">
@@ -257,108 +257,89 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="897" height="634" key="DebuggerActiveHint/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168205560" />
-    <state width="2517" height="330" key="GridCell.Tab.0.bottom" timestamp="1598171097614">
+    <state width="2517" height="156" key="GridCell.Tab.0.bottom" timestamp="1598171146132">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="330" key="GridCell.Tab.0.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171097614" />
-    <state width="2517" height="330" key="GridCell.Tab.0.center" timestamp="1598171097614">
+    <state width="2517" height="156" key="GridCell.Tab.0.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171146132" />
+    <state width="2517" height="156" key="GridCell.Tab.0.center" timestamp="1598171146132">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="330" key="GridCell.Tab.0.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171097614" />
-    <state width="2517" height="330" key="GridCell.Tab.0.left" timestamp="1598171097614">
+    <state width="2517" height="156" key="GridCell.Tab.0.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171146132" />
+    <state width="2517" height="156" key="GridCell.Tab.0.left" timestamp="1598171146132">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="330" key="GridCell.Tab.0.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171097614" />
-    <state width="2517" height="330" key="GridCell.Tab.0.right" timestamp="1598171097614">
+    <state width="2517" height="156" key="GridCell.Tab.0.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171146132" />
+    <state width="2517" height="156" key="GridCell.Tab.0.right" timestamp="1598171146132">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="330" key="GridCell.Tab.0.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171097614" />
-    <state width="2517" height="523" key="GridCell.Tab.1.bottom" timestamp="1598171096602">
+    <state width="2517" height="156" key="GridCell.Tab.0.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171146132" />
+    <state width="2517" height="156" key="GridCell.Tab.1.bottom" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096602" />
-    <state width="2517" height="523" key="GridCell.Tab.1.center" timestamp="1598171096602">
+    <state width="2517" height="156" key="GridCell.Tab.1.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.1.center" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096602" />
-    <state width="2517" height="523" key="GridCell.Tab.1.left" timestamp="1598171096602">
+    <state width="2517" height="156" key="GridCell.Tab.1.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.1.left" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096602" />
-    <state width="2517" height="523" key="GridCell.Tab.1.right" timestamp="1598171096602">
+    <state width="2517" height="156" key="GridCell.Tab.1.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.1.right" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.1.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096602" />
-    <state width="2517" height="523" key="GridCell.Tab.2.bottom" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.1.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.2.bottom" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
-    <state width="2517" height="523" key="GridCell.Tab.2.center" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.2.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.2.center" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
-    <state width="2517" height="523" key="GridCell.Tab.2.left" timestamp="1598171096602">
+    <state width="2517" height="156" key="GridCell.Tab.2.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.2.left" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096602" />
-    <state width="2517" height="523" key="GridCell.Tab.2.right" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.2.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.2.right" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.2.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
-    <state width="2517" height="523" key="GridCell.Tab.3.bottom" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.2.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.3.bottom" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
-    <state width="2517" height="523" key="GridCell.Tab.3.center" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.3.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.3.center" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
-    <state width="2517" height="523" key="GridCell.Tab.3.left" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.3.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.3.left" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
-    <state width="2517" height="523" key="GridCell.Tab.3.right" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.3.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.3.right" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.3.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
-    <state width="2517" height="523" key="GridCell.Tab.4.bottom" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.3.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.4.bottom" timestamp="1598171145875">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.4.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
-    <state width="2517" height="523" key="GridCell.Tab.4.center" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.4.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145875" />
+    <state width="2517" height="156" key="GridCell.Tab.4.center" timestamp="1598171145875">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.4.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
-    <state width="2517" height="523" key="GridCell.Tab.4.left" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.4.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145875" />
+    <state width="2517" height="156" key="GridCell.Tab.4.left" timestamp="1598171145874">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.4.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
-    <state width="2517" height="523" key="GridCell.Tab.4.right" timestamp="1598171096603">
+    <state width="2517" height="156" key="GridCell.Tab.4.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145874" />
+    <state width="2517" height="156" key="GridCell.Tab.4.right" timestamp="1598171145875">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="523" key="GridCell.Tab.4.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171096603" />
+    <state width="2517" height="156" key="GridCell.Tab.4.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598171145875" />
     <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size" timestamp="1598167390890">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598167390890" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MailDiary.Types/Configuration.cs</url>
-          <line>38</line>
-          <properties documentPath="C:\dev\sascha\MailDiary\MailDiary.Types\Configuration.cs" initialLine="36">
-            <startOffsets>
-              <option value="1227" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1291" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

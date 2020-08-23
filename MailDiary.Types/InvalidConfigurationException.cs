@@ -13,5 +13,9 @@ namespace MailDiary.Types
     public InvalidConfigurationException( string message ) : base( message )
     {
     }
+    
+    public InvalidConfigurationException( string message, Exception innerException ) : base( message, innerException )
+    {
+    }
   }
 }

@@ -4,6 +4,7 @@
 namespace MailDiary.Types
 {
   using System;
+  using YamlDotNet.Serialization;
 
   /// <summary>
   /// Configuration related to IMAP server
@@ -11,9 +12,16 @@ namespace MailDiary.Types
   // ReSharper disable once ClassNeverInstantiated.Global
   public class MailConfiguration
   {
-    public string Server   { get; set; }
-    public int    Port     { get; set; }
-    public string User     { get; set; }
+    [YamlMember( Alias = "server", ApplyNamingConventions = false )]
+    public string Server { get; set; }
+
+    [YamlMember( Alias = "port", ApplyNamingConventions = false )]
+    public int Port { get; set; }
+
+    [YamlMember( Alias = "user", ApplyNamingConventions = false )]
+    public string User { get; set; }
+
+    [YamlMember( Alias = "password", ApplyNamingConventions = false )]
     public string Password { get; set; }
 
     /// <summary>
@@ -26,7 +34,7 @@ namespace MailDiary.Types
         throw new InvalidConfigurationException( "{Server} is not a valid server" );
       if ( Port <= 0 || Port > 65535 )
         throw new InvalidConfigurationException( "{Port} is not a valid port definition" );
-      if ( !string.IsNullOrEmpty( User ) && User.Trim( ' ', '\t' ).Length > 0) {
+      if ( !string.IsNullOrEmpty( User ) && User.Trim( ' ', '\t' ).Length > 0 ) {
         if ( string.IsNullOrWhiteSpace( Password ) )
           throw new InvalidConfigurationException( "No password for user provided" );
       }

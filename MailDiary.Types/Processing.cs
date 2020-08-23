@@ -6,6 +6,7 @@ namespace MailDiary.Types
   using System.Collections.Generic;
   using System.Linq;
   using System.Text.RegularExpressions;
+  using YamlDotNet.Serialization;
 
   /// <summary>
   /// Processing contains options related to process mail
@@ -14,7 +15,8 @@ namespace MailDiary.Types
   {
     private const string EmailValidation =
       @"(?<name>\A[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*)@(?<domain>(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\z)";
-    
+
+    [YamlMember( Alias = "whitelisted-senders", ApplyNamingConventions = false )]
     public List<string> WhitelistedSenders { get; set; }
 
     public Processing()
@@ -28,7 +30,7 @@ namespace MailDiary.Types
     /// <exception cref="InvalidConfigurationException">Thrown with message containing error</exception>
     public void Validate()
     {
-      var r = new Regex(EmailValidation);
+      var r = new Regex( EmailValidation );
       if ( WhitelistedSenders.Any( mail => !r.IsMatch( mail ) ) ) {
         throw new InvalidConfigurationException( "{mail} is not a valid e-mail address" );
       }

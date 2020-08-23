@@ -10,9 +10,13 @@
   /// </summary>
   public class Configuration
   {
-    public MailConfiguration Mail             { get; set; }
-    public Processing        Processing       { get; set; }
-    public string            MarkdownBasePath { get; set; }
+    [YamlMember( Alias = "mail", ApplyNamingConventions = false )]
+    public MailConfiguration Mail       { get; set; }
+    [YamlMember( Alias = "processing", ApplyNamingConventions = false )]
+    public Processing        Processing { get; set; }
+
+    [YamlMember( Alias = "markdown-base-path", ApplyNamingConventions = false )]
+    public string MarkdownBasePath { get; set; }
 
     /// <summary>
     /// Read configuration from a YAML file
@@ -30,10 +34,14 @@
         throw new FileNotFoundException();
       }
 
-      var fileContent = File.ReadAllText( path );
-      config = deserializer.Deserialize<Configuration>( fileContent );
-      if ( null == config ) {
-        throw new ArgumentException( "configuration could not be deserialized" );
+      try {
+        var fileContent = File.ReadAllText( path );
+        config = deserializer.Deserialize<Configuration>( fileContent );
+        if ( null == config ) {
+          throw new ArgumentException( "configuration could not be deserialized" );
+        }
+      } catch ( Exception ex ) {
+        throw new InvalidConfigurationException( "could not deserialize", ex );
       }
 
       config.Validate();

@@ -3,5 +3,6 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::B40B243F-5B31-47E9-AF6B-AF1C6F48EFFC::.NETCoreApp,Version=v3.1::MailDiaryTypes.Tests.ConfigurationTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::B40B243F-5B31-47E9-AF6B-AF1C6F48EFFC::.NETCoreApp,Version=v3.1::MailDiaryTypes.Tests.MailConfigurationTests.TestServer&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B40B243F-5B31-47E9-AF6B-AF1C6F48EFFC::.NETCoreApp,Version=v3.1::MailDiaryTypes.Tests.ProcessingTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

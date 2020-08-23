@@ -14,12 +14,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: add Imap connection">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MailDiary.ImapConnector/ImapConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.ImapConnector/ImapConnector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary.Types/Configuration/MailConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Configuration/MailConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary.Types/Configuration/Processing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Configuration/Processing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary.Types/Content/Incoming.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Content/Incoming.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary.Types/Mail/IMailConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Mail/IMailConnector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary.Types/Mail/MailMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Mail/MailMessage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MailDiary/Commands/Process.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/Commands/Process.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary/MailDiary.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/MailDiary.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiaryTypes.Tests/Content/IncomingTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiaryTypes.Tests/Content/IncomingTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,23 +73,23 @@
         <option value="$PROJECT_DIR$/MailDiary.Types/Processing.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Configuration/Configuration.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Configuration/InvalidConfigurationException.cs" />
-        <option value="$PROJECT_DIR$/MailDiary.Types/Configuration/MailConfiguration.cs" />
-        <option value="$PROJECT_DIR$/MailDiary.Types/Configuration/Processing.cs" />
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/Configuration/ConfigurationTests.cs" />
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/Configuration/MailConfigurationTests.cs" />
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/Configuration/ProcessingTests.cs" />
-        <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/Content/IncomingTests.cs" />
-        <option value="$PROJECT_DIR$/MailDiary.Types/Content/Incoming.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Mail/MailConnector.cs" />
         <option value="$PROJECT_DIR$/MailDiary.ImapConnector/Class1.cs" />
         <option value="$PROJECT_DIR$/MailDiary/Commands/Validate.cs" />
-        <option value="$PROJECT_DIR$/MailDiary/Program.cs" />
-        <option value="$PROJECT_DIR$/MailDiary.Types/Mail/MailMessage.cs" />
-        <option value="$PROJECT_DIR$/MailDiary.Types/Mail/IMailConnector.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Filesystem/Class1.cs" />
-        <option value="$PROJECT_DIR$/MailDiary.ImapConnector/ImapConnector.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Filesystem/FilesystemHandler.cs" />
+        <option value="$PROJECT_DIR$/MailDiary/Program.cs" />
+        <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/Content/IncomingTests.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.ImapConnector/ImapConnector.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Types/Content/Incoming.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Types/Mail/IMailConnector.cs" />
         <option value="$PROJECT_DIR$/MailDiary/Commands/Process.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Types/Mail/MailMessage.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Types/Configuration/MailConfiguration.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Types/Configuration/Processing.cs" />
       </list>
     </option>
   </component>
@@ -110,7 +114,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="ics" />
   </component>
-  <component name="RunManager" selected=".NET Project.MailDiary">
+  <component name="RunManager">
     <configuration name="MailDiary" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/MailDiary/bin/Debug/netcoreapp3.1/MailDiary.dll" />
       <option name="PROGRAM_PARAMETERS" value="--configuration &quot;C:\tools\maildiary.yaml&quot; process" />
@@ -129,9 +133,6 @@
         <option name="Build" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue=".NET Project.MailDiary" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -236,18 +237,18 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 0% 324/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 319/319" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 0% 324/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Libs 0% 167/167" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 319/319" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Libs 0% 164/164" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 0% 324/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Libs 0% 167/167" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="MailDiary.Types 0% 103/103" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 319/319" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Libs 0% 164/164" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MailDiary.Types 0% 101/101" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -297,22 +298,22 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="897" height="634" key="DebuggerActiveHint/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168205560" />
-    <state width="2517" height="404" key="GridCell.Tab.0.bottom" timestamp="1598178071689">
+    <state width="2517" height="404" key="GridCell.Tab.0.bottom" timestamp="1598178769434">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178071689" />
-    <state width="2517" height="404" key="GridCell.Tab.0.center" timestamp="1598178071689">
+    <state width="2517" height="404" key="GridCell.Tab.0.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178769434" />
+    <state width="2517" height="404" key="GridCell.Tab.0.center" timestamp="1598178769434">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178071689" />
-    <state width="2517" height="404" key="GridCell.Tab.0.left" timestamp="1598178071689">
+    <state width="2517" height="404" key="GridCell.Tab.0.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178769434" />
+    <state width="2517" height="404" key="GridCell.Tab.0.left" timestamp="1598178769433">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178071689" />
-    <state width="2517" height="404" key="GridCell.Tab.0.right" timestamp="1598178071689">
+    <state width="2517" height="404" key="GridCell.Tab.0.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178769433" />
+    <state width="2517" height="404" key="GridCell.Tab.0.right" timestamp="1598178769434">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178071689" />
+    <state width="2517" height="404" key="GridCell.Tab.0.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178769434" />
     <state width="2517" height="375" key="GridCell.Tab.1.bottom" timestamp="1598177351316">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
@@ -385,5 +386,9 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="1114" y="405" key="RiderGenerateDialog/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598175735412" />
+    <state x="872" y="437" key="Vcs.Push.Dialog.v2" timestamp="1598178527977">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="872" y="437" key="Vcs.Push.Dialog.v2/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178527977" />
   </component>
 </project>

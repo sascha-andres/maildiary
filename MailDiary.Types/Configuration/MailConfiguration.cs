@@ -33,6 +33,7 @@ namespace MailDiary.Types.Configuration
         throw new InvalidConfigurationException( "{Server} is not a valid server" );
       if ( Port <= 0 || Port > 65535 )
         throw new InvalidConfigurationException( "{Port} is not a valid port definition" );
+      // ReSharper disable once InvertIf
       if ( !string.IsNullOrEmpty( User ) && User.Trim( ' ', '\t' ).Length > 0 ) {
         if ( string.IsNullOrWhiteSpace( Password ) )
           throw new InvalidConfigurationException( "No password for user provided" );

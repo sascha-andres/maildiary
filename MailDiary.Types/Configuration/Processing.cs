@@ -17,6 +17,8 @@ namespace MailDiary.Types.Configuration
       @"(?<name>\A[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*)@(?<domain>(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\z)";
 
     [YamlMember( Alias = "whitelisted-senders", ApplyNamingConventions = false )]
+    // ReSharper disable once MemberCanBePrivate.Global
+    // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
     public List<string> WhitelistedSenders { get; set; }
 
     public Processing()

@@ -9,7 +9,7 @@ namespace MailDiary.Types.Mail
   {
     public string   SenderMail     { get; set; }
     public string   ServerIdentity { get; set; }
-    public Incoming Data           { get; set; }
+    public Incoming Data           { get; }
 
     public MailMessage()
     {

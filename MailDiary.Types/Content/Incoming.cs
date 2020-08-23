@@ -24,8 +24,8 @@ namespace MailDiary.Types.Content
 
       return MarkDownTemplate
              .Replace( "%%RECEIVED%%", Received.ToString("dd/MM/yyyy HH:mm:ss") )
-             .Replace( "%%SUBJECT%%",  Subject.ToString() )
-             .Replace( "%%CONTENT%%",  Content.ToString() );
+             .Replace( "%%SUBJECT%%",  Subject )
+             .Replace( "%%CONTENT%%",  Content );
     }
   }
 }

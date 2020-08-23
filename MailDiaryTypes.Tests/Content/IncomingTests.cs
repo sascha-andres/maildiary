@@ -7,9 +7,17 @@ namespace MailDiaryTypes.Tests.Content
   using System.Globalization;
   using MailDiary.Types.Content;
   using Xunit;
+  using Xunit.Abstractions;
 
   public class IncomingTests
   {
+    private readonly ITestOutputHelper _testOutputHelper;
+
+    public IncomingTests( ITestOutputHelper testOutputHelper )
+    {
+      _testOutputHelper = testOutputHelper;
+    }
+
     [Theory]
     [InlineData( "01/01/2000 01:01:01", "subject", "content", false, @"## (01/01/2000 01:01:01) subject
 
@@ -33,7 +41,7 @@ content" )]
       try {
         markdown = incoming.ToMarkdown();
       } catch ( Exception ex ) {
-        Console.WriteLine( ex.Message );
+        _testOutputHelper.WriteLine( ex.Message );
         exceptionThrown = true;
       }
 

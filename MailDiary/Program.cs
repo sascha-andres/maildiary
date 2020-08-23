@@ -5,14 +5,15 @@ namespace MailDiary
   using System.Reflection;
   using Commands;
   using Microsoft.Extensions.CommandLineUtils;
-
-  class Program
+  
+  internal static class Program
   {
-    static void Main( string[] args )
+    private static void Main( string[] args )
     {
-      var app = new CommandLineApplication();
-      app.Name        = "MailDiary";
-      app.Description = "MailDiary is a diary app reading input from a mail account";
+      var app = new CommandLineApplication {
+                                             Name        = "MailDiary",
+                                             Description = "MailDiary is a diary app reading input from a mail account"
+                                           };
 
       app.HelpOption( "-?|-h|--help" );
 

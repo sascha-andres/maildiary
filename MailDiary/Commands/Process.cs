@@ -8,6 +8,7 @@ namespace MailDiary.Commands
   using ImapConnector;
   using Microsoft.Extensions.CommandLineUtils;
   using Types.Configuration;
+  using Types.Mail;
 
   public static class Process
   {
@@ -23,7 +24,7 @@ namespace MailDiary.Commands
       Console.WriteLine( $"Using {cfg}" );
       var config = Configuration.FromYamlFile( cfg );
 
-      using var mailConnector = new ImapConnector();
+      using IMailConnector mailConnector = new ImapConnector();
       mailConnector.SetConfiguration( config.Mail );
       mailConnector.Start();
 

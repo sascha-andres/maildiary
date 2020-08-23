@@ -17,7 +17,7 @@ namespace MailDiary.ImapConnector
     private const string            UnwantedFolderName  = "Unwanted";
     private       MailConfiguration _mailConfiguration;
     private       ImapClient        _client;
-    private       IMailFolder       _whiteListed = null;
+    private       IMailFolder       _whiteListed;
     private       IMailFolder       _unwanted;
 
     /// <summary>
@@ -30,7 +30,7 @@ namespace MailDiary.ImapConnector
       _client.Authenticate( _mailConfiguration.User, _mailConfiguration.Password );
       _client.Inbox.Open( FolderAccess.ReadWrite );
       
-      foreach ( var folder in _client.Inbox.GetSubfolders( false ) ) {
+      foreach ( var folder in _client.Inbox.GetSubfolders() ) {
         if ( null == _whiteListed && folder.Name == ProcessedFolderName )
           _whiteListed = folder;
         if ( null == _unwanted && folder.Name == UnwantedFolderName )

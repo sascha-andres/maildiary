@@ -4,7 +4,8 @@
 
   public class Configuration
   {
-    public MailConfiguration Mail { get; set; }
+    public MailConfiguration Mail             { get; set; }
+    public string            MarkdownBasePath { get; set; }
 
     public Configuration( string path )
     {

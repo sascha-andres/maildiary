@@ -21,4 +21,7 @@ Global
 		{7DAD7264-A53D-4C91-B910-DB38242B62DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DAD7264-A53D-4C91-B910-DB38242B62DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7DAD7264-A53D-4C91-B910-DB38242B62DD} = {E3AAC9C7-DEBF-4CEB-8659-159A64F9A5B8}
+	EndGlobalSection
 EndGlobal

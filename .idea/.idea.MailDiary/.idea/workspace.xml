@@ -13,16 +13,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: add incoming class to generate markdown snippet">
-      <change afterPath="$PROJECT_DIR$/MailDiary.Types/Mail/IMailConnector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MailDiary.Types/Mail/MailMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MailDiary/Commands/Process.cs" afterDir="false" />
+    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: add Imap connection">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary.ImapConnector/ImapConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.ImapConnector/ImapConnector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MailDiary.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary/Commands/Validate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/Commands/Validate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary/Commands/Process.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/Commands/Process.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MailDiary/MailDiary.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/MailDiary.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +82,10 @@
         <option value="$PROJECT_DIR$/MailDiary/Program.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Mail/MailMessage.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Mail/IMailConnector.cs" />
-        <option value="$PROJECT_DIR$/MailDiary/Commands/Process.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Filesystem/Class1.cs" />
         <option value="$PROJECT_DIR$/MailDiary.ImapConnector/ImapConnector.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Filesystem/FilesystemHandler.cs" />
+        <option value="$PROJECT_DIR$/MailDiary/Commands/Process.cs" />
       </list>
     </option>
   </component>
@@ -143,7 +142,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598164851547</updated>
       <workItem from="1598164856794" duration="175000" />
-      <workItem from="1598165315600" duration="11440000" />
+      <workItem from="1598165315600" duration="11970000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1598165732884</created>
@@ -215,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598172613594</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: add Imap connection">
+      <created>1598177562522</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598177562522</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,17 +236,17 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 0% 302/302" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 324/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 0% 302/302" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Libs 0% 153/153" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 324/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Libs 0% 167/167" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 0% 302/302" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Libs 0% 153/153" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 324/324" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Libs 0% 167/167" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="MailDiary.Types 0% 103/103" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
@@ -271,7 +277,8 @@
     <MESSAGE value="feat: add command to validate configuration" />
     <MESSAGE value="refactor: move configuration to own namespace" />
     <MESSAGE value="feat: add incoming class to generate markdown snippet" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add incoming class to generate markdown snippet" />
+    <MESSAGE value="feat: add Imap connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add Imap connection" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598175062255">
@@ -290,22 +297,22 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="897" height="634" key="DebuggerActiveHint/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168205560" />
-    <state width="2517" height="404" key="GridCell.Tab.0.bottom" timestamp="1598177353349">
+    <state width="2517" height="404" key="GridCell.Tab.0.bottom" timestamp="1598178071689">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177353349" />
-    <state width="2517" height="404" key="GridCell.Tab.0.center" timestamp="1598177353349">
+    <state width="2517" height="404" key="GridCell.Tab.0.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178071689" />
+    <state width="2517" height="404" key="GridCell.Tab.0.center" timestamp="1598178071689">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177353349" />
-    <state width="2517" height="404" key="GridCell.Tab.0.left" timestamp="1598177353348">
+    <state width="2517" height="404" key="GridCell.Tab.0.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178071689" />
+    <state width="2517" height="404" key="GridCell.Tab.0.left" timestamp="1598178071689">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177353348" />
-    <state width="2517" height="404" key="GridCell.Tab.0.right" timestamp="1598177353349">
+    <state width="2517" height="404" key="GridCell.Tab.0.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178071689" />
+    <state width="2517" height="404" key="GridCell.Tab.0.right" timestamp="1598178071689">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177353349" />
+    <state width="2517" height="404" key="GridCell.Tab.0.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178071689" />
     <state width="2517" height="375" key="GridCell.Tab.1.bottom" timestamp="1598177351316">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
@@ -370,10 +377,10 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="2517" height="375" key="GridCell.Tab.4.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size" timestamp="1598172780440">
+    <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size" timestamp="1598177606823">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598172780440" />
+    <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177606823" />
     <state x="1114" y="405" key="RiderGenerateDialog" timestamp="1598175735412">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>

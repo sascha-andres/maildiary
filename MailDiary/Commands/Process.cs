@@ -4,7 +4,7 @@
 namespace MailDiary.Commands
 {
   using System;
-  using System.Threading;
+  using Filesystem;
   using ImapConnector;
   using Microsoft.Extensions.CommandLineUtils;
   using Types.Configuration;
@@ -27,9 +27,15 @@ namespace MailDiary.Commands
       mailConnector.SetConfiguration( config.Mail );
       mailConnector.Start();
 
+      var filesystemHandler = new FilesystemHandler( config );
       foreach ( var mail in mailConnector.GetMails() ) {
         if ( config.Processing.IsWhiteListed( mail.SenderMail ) ) {
-          Console.WriteLine( mail.ToString() );
+          try {
+            filesystemHandler.Save( mail );
+            mailConnector.Whitelisted( mail );
+          } catch ( Exception ex ) {
+            Console.WriteLine($"Error while writing mail: {ex.Message}");
+          }
         } else {
           mailConnector.Unwanted( mail );
         }

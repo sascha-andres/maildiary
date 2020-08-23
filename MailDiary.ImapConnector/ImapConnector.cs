@@ -31,7 +31,6 @@ namespace MailDiary.ImapConnector
       _client.Inbox.Open( FolderAccess.ReadWrite );
       
       foreach ( var folder in _client.Inbox.GetSubfolders( false ) ) {
-        Console.WriteLine(folder);
         if ( null == _whiteListed && folder.Name == ProcessedFolderName )
           _whiteListed = folder;
         if ( null == _unwanted && folder.Name == UnwantedFolderName )

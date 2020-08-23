@@ -20,6 +20,18 @@
         </e>
         <e p="Program.cs" t="Include" />
       </e>
+      <e p="MailDiary.Filesystem" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FilesystemHandler.cs" t="Include" />
+        <e p="MailDiary.Filesystem.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="MailDiary.Filesystem.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="MailDiary.ImapConnector" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="ImapConnector.cs" t="Include" />

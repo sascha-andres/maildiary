@@ -13,13 +13,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: move lib to solution folder">
-      <change afterPath="$PROJECT_DIR$/MailDiaryTypes.Tests/MailConfigurationTests.cs" afterDir="false" />
+    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: add unit tests">
+      <change afterPath="$PROJECT_DIR$/MailDiaryTypes.Tests/ProcessingTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailDiary.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary.Types/Processing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Processing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiaryTypes.Tests/MailConfigurationTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiaryTypes.Tests/MailConfigurationTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +38,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3A47EFC-D84A-4DF7-9ACB-B8F372AD17E8/c5/845f8995/IDeserializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/66/Char.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/dev/sascha/MailDiary/MailDiaryTypes.Tests/MailConfigurationTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/dev/sascha/MailDiary/MailDiary.Types/Configuration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/36/String.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -47,12 +47,13 @@
       <list>
         <option value="$PROJECT_DIR$/MailDiary.Types/Class1.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/InvalidConfigurationException.cs" />
-        <option value="$PROJECT_DIR$/MailDiary.Types/Processing.cs" />
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/Class1.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Configuration.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/MailConfiguration.cs" />
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/ConfigurationTests.cs" />
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/MailConfigurationTests.cs" />
+        <option value="$PROJECT_DIR$/MailDiary.Types/Processing.cs" />
+        <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/ProcessingTests.cs" />
       </list>
     </option>
   </component>
@@ -106,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598164851547</updated>
       <workItem from="1598164856794" duration="175000" />
-      <workItem from="1598165315600" duration="3253000" />
+      <workItem from="1598165315600" duration="3769000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1598165732884</created>
@@ -143,11 +144,68 @@
       <option name="project" value="LOCAL" />
       <updated>1598167344998</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: add unit tests">
+      <created>1598168684054</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598168684054</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="339" />
+    <coverage-tree-state>
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 45% 66/121" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 45% 66/121" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Libs 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 45% 66/121" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Libs 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MailDiary.Types 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 45% 66/121" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Libs 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MailDiary.Types 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MailDiary.Types 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 45% 66/121" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Libs 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MailDiary.Types 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MailDiary.Types 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Processing 77% 3/13" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 45% 66/121" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Libs 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MailDiary.Types 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="MailDiary.Types 58% 28/66" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Processing 77% 3/13" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Validate() 57% 3/7" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -168,7 +226,8 @@
     <MESSAGE value="feat: add markdown base path option" />
     <MESSAGE value="feat: add validation" />
     <MESSAGE value="feat: move lib to solution folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: move lib to solution folder" />
+    <MESSAGE value="feat: add unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add unit tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1035" y="407" width="1269" height="595" key="#xdebugger.evaluate" timestamp="1598168317895">

@@ -33,5 +33,15 @@ namespace MailDiary.Types
         throw new InvalidConfigurationException( "{mail} is not a valid e-mail address" );
       }
     }
+
+    /// <summary>
+    /// Check for whitelisting
+    /// </summary>
+    /// <param name="mail">Is this mail whitelisted?</param>
+    /// <returns>true if whitelisted</returns>
+    public bool IsWhiteListed( string mail )
+    {
+      return WhitelistedSenders.Contains( mail );
+    }
   }
 }

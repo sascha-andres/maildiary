@@ -12,8 +12,18 @@ namespace MailDiary.Commands
 
   public static class Process
   {
-    public static int RunCommand( CommandLineApplication app, CommandOption configOption,
-                                  CommandLineApplication process )
+    public static void Register( CommandLineApplication cmdApp, CommandOption configOption )
+    {
+      cmdApp.Command( "process", c => {
+                                   c.Description =
+                                     "Get mails and generate markdown file(s)";
+                                   c.OnExecute(
+                                               () => RunCommand( configOption )
+                                              );
+                                 } );
+    }
+
+    private static int RunCommand( CommandOption configOption )
     {
       var cfg = configOption.Value();
       if ( string.IsNullOrEmpty( cfg ) ) {
@@ -33,13 +43,13 @@ namespace MailDiary.Commands
         if ( config.Processing.IsWhiteListed( mail.SenderMail ) ) {
           try {
             filesystemHandler.Save( mail );
-            mailConnector.Whitelisted( mail );
+            //mailConnector.Whitelisted( mail );
           } catch ( Exception ex ) {
-            Console.WriteLine($"Error while writing mail: {ex.Message}");
+            Console.WriteLine( $"Error while writing mail: {ex.Message}" );
           }
-        } else {
+        } /*else {
           mailConnector.Unwanted( mail );
-        }
+        }*/
       }
 
       return 0;

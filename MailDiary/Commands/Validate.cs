@@ -9,8 +9,18 @@ namespace MailDiary.Commands
 
   public static class Validate
   {
-    public static int RunCommand( CommandLineApplication app, CommandOption configOption,
-                                  CommandLineApplication validate )
+    public static void Register( CommandLineApplication cmdApp, CommandOption configOption )
+    {
+      cmdApp.Command( "validate", c => {
+                                    c.Description =
+                                      "Validate configuration";
+                                    c.OnExecute(
+                                                () => RunCommand( configOption )
+                                               );
+                                  } );
+    }
+
+    public static int RunCommand( CommandOption configOption )
     {
       var cfg = configOption.Value();
       if ( string.IsNullOrEmpty( cfg ) ) {

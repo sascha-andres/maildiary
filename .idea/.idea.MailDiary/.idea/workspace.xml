@@ -13,9 +13,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="chore: clean code and run inspections">
-      <change afterPath="$PROJECT_DIR$/MailDiary/AssemblyInfo.cs" afterDir="false" />
+    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="chore: add version info">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MailDiary/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary/Commands/Process.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/Commands/Process.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary/Commands/Validate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/Commands/Validate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary/MailDiary.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/MailDiary.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MailDiary/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,18 +39,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F29ACDDE-3A89-441D-9B28-B9A12C87D0BC/59/b5e572df/ImapFolder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F29ACDDE-3A89-441D-9B28-B9A12C87D0BC/a9/2819669f/IMailFolder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3A47EFC-D84A-4DF7-9ACB-B8F372AD17E8/c5/845f8995/IDeserializer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/dev/sascha/MailDiary/MailDiaryTypes.Tests/MailConfigurationTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/49/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F29ACDDE-3A89-441D-9B28-B9A12C87D0BC/7b/c63c59c9/ImapEngine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4065B38D-0F9F-44D9-8F53-F4C9102AF396/83/fb5bff83/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F29ACDDE-3A89-441D-9B28-B9A12C87D0BC/44/9acc4b4d/FolderNamespaceCollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F29ACDDE-3A89-441D-9B28-B9A12C87D0BC/1d/e828a4f2/ImapClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/dev/sascha/MailDiary/MailDiary.Types/Configuration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD5660CA-150D-4AF4-A501-B3BD9AEB3E0D/44/7fa09e27/CommandOption.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F29ACDDE-3A89-441D-9B28-B9A12C87D0BC/04/bd087592/FolderNamespace.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/66/Char.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/dev/sascha/MailDiary/MailDiary.Types/Configuration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/36/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E08DC63F-6702-40CC-B13A-411FC1C66760/e8/d05190f6/MailboxAddress.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD5660CA-150D-4AF4-A501-B3BD9AEB3E0D/16/ed106ecd/CommandLineApplication.cs" root0="SKIP_HIGHLIGHTING" />
@@ -70,19 +71,19 @@
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/Configuration/ProcessingTests.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Mail/MailConnector.cs" />
         <option value="$PROJECT_DIR$/MailDiary.ImapConnector/Class1.cs" />
-        <option value="$PROJECT_DIR$/MailDiary/Commands/Validate.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Filesystem/Class1.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Filesystem/FilesystemHandler.cs" />
-        <option value="$PROJECT_DIR$/MailDiary/Program.cs" />
         <option value="$PROJECT_DIR$/MailDiaryTypes.Tests/Content/IncomingTests.cs" />
         <option value="$PROJECT_DIR$/MailDiary.ImapConnector/ImapConnector.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Content/Incoming.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Mail/IMailConnector.cs" />
-        <option value="$PROJECT_DIR$/MailDiary/Commands/Process.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Mail/MailMessage.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Configuration/MailConfiguration.cs" />
         <option value="$PROJECT_DIR$/MailDiary.Types/Configuration/Processing.cs" />
         <option value="$PROJECT_DIR$/MailDiary/AssemblyInfo.cs" />
+        <option value="$PROJECT_DIR$/MailDiary/Program.cs" />
+        <option value="$PROJECT_DIR$/MailDiary/Commands/Validate.cs" />
+        <option value="$PROJECT_DIR$/MailDiary/Commands/Process.cs" />
       </list>
     </option>
   </component>
@@ -137,6 +138,8 @@
       <updated>1598164851547</updated>
       <workItem from="1598164856794" duration="175000" />
       <workItem from="1598165315600" duration="11970000" />
+      <workItem from="1598244842609" duration="23000" />
+      <workItem from="1598275979444" duration="1076000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1598165732884</created>
@@ -222,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598178833713</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="chore: add version info">
+      <created>1598179004201</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1598179004201</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +290,8 @@
     <MESSAGE value="feat: add incoming class to generate markdown snippet" />
     <MESSAGE value="feat: add Imap connection" />
     <MESSAGE value="chore: clean code and run inspections" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: clean code and run inspections" />
+    <MESSAGE value="chore: add version info" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add version info" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598175062255">
@@ -299,86 +310,86 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state width="897" height="634" key="DebuggerActiveHint/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598168205560" />
-    <state width="2517" height="404" key="GridCell.Tab.0.bottom" timestamp="1598178809075">
+    <state width="2517" height="374" key="GridCell.Tab.0.bottom" timestamp="1598276945541">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178809075" />
-    <state width="2517" height="404" key="GridCell.Tab.0.center" timestamp="1598178809075">
+    <state width="2517" height="374" key="GridCell.Tab.0.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945541" />
+    <state width="2517" height="374" key="GridCell.Tab.0.center" timestamp="1598276945541">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178809075" />
-    <state width="2517" height="404" key="GridCell.Tab.0.left" timestamp="1598178809075">
+    <state width="2517" height="374" key="GridCell.Tab.0.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945541" />
+    <state width="2517" height="374" key="GridCell.Tab.0.left" timestamp="1598276945541">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178809075" />
-    <state width="2517" height="404" key="GridCell.Tab.0.right" timestamp="1598178809075">
+    <state width="2517" height="374" key="GridCell.Tab.0.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945541" />
+    <state width="2517" height="374" key="GridCell.Tab.0.right" timestamp="1598276945541">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="404" key="GridCell.Tab.0.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598178809075" />
-    <state width="2517" height="375" key="GridCell.Tab.1.bottom" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.0.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945541" />
+    <state width="2517" height="374" key="GridCell.Tab.1.bottom" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.1.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.1.center" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.1.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.1.center" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.1.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.1.left" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.1.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.1.left" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.1.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.1.right" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.1.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.1.right" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.1.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.2.bottom" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.1.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.2.bottom" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.2.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.2.center" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.2.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.2.center" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.2.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.2.left" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.2.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.2.left" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.2.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.2.right" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.2.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.2.right" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.2.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.3.bottom" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.2.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.3.bottom" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.3.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.3.center" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.3.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.3.center" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.3.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.3.left" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.3.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.3.left" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.3.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.3.right" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.3.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.3.right" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.3.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.4.bottom" timestamp="1598177351317">
+    <state width="2517" height="374" key="GridCell.Tab.3.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.4.bottom" timestamp="1598276945276">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.4.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351317" />
-    <state width="2517" height="375" key="GridCell.Tab.4.center" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.4.bottom/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945276" />
+    <state width="2517" height="374" key="GridCell.Tab.4.center" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.4.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.4.left" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.4.center/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.4.left" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.4.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
-    <state width="2517" height="375" key="GridCell.Tab.4.right" timestamp="1598177351316">
+    <state width="2517" height="374" key="GridCell.Tab.4.left/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
+    <state width="2517" height="374" key="GridCell.Tab.4.right" timestamp="1598276945275">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.4.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598177351316" />
+    <state width="2517" height="374" key="GridCell.Tab.4.right/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598276945275" />
     <state x="933" y="374" key="Rider.ProjectTemplateDialog.Size" timestamp="1598177606823">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>

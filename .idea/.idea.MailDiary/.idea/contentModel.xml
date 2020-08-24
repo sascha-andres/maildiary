@@ -6,6 +6,7 @@
       <e p="MailDiary" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Commands" t="Include">
+          <e p="CommandLineApplicationExtensions.cs" t="Include" />
           <e p="Process.cs" t="Include" />
           <e p="Validate.cs" t="Include" />
         </e>

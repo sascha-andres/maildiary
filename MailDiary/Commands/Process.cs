@@ -17,13 +17,16 @@ namespace MailDiary.Commands
       cmdApp.Command( "process", c => {
                                    c.Description =
                                      "Get mails and generate markdown file(s)";
+                                   var preserveMails = c.AddOption( "preserve-mails", "p",
+                                                                   "do not move mails to folders",
+                                                                   CommandOptionType.NoValue );
                                    c.OnExecute(
-                                               () => RunCommand( configOption )
+                                               () => RunCommand( configOption, preserveMails )
                                               );
                                  } );
     }
 
-    private static int RunCommand( CommandOption configOption )
+    private static int RunCommand( CommandOption configOption, CommandOption preserveMails )
     {
       var cfg = configOption.Value();
       if ( string.IsNullOrEmpty( cfg ) ) {
@@ -43,13 +46,15 @@ namespace MailDiary.Commands
         if ( config.Processing.IsWhiteListed( mail.SenderMail ) ) {
           try {
             filesystemHandler.Save( mail );
-            //mailConnector.Whitelisted( mail );
+            if ( !preserveMails.HasValue() )
+              mailConnector.Whitelisted( mail );
           } catch ( Exception ex ) {
             Console.WriteLine( $"Error while writing mail: {ex.Message}" );
           }
-        } /*else {
-          mailConnector.Unwanted( mail );
-        }*/
+        } else {
+          if ( !preserveMails.HasValue() )
+            mailConnector.Unwanted( mail );
+        }
       }
 
       return 0;

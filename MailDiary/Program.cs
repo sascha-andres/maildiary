@@ -8,14 +8,6 @@ namespace MailDiary
   
   internal static class Program
   {
-    private static CommandOption AddOption(CommandLineApplication app, string optionName, string shortName, string description, CommandOptionType optionType)
-    {
-      var argSuffix = optionType == CommandOptionType.MultipleValue ? "..." : null;
-      var argString = optionType == CommandOptionType.SingleValue ? null : $" <arg>{argSuffix}";
-
-      return app.Option( string.IsNullOrWhiteSpace( shortName ) ? $"-{shortName}|--{optionName}{argString}" : $"--{optionName}{argString}", description, optionType );
-    }
-    
     private static void Main( string[] args )
     {
       var app = new CommandLineApplication {
@@ -25,7 +17,7 @@ namespace MailDiary
 
       app.HelpOption( "-?|-h|--help" );
 
-      var configOption = AddOption( app, "configuration", "c", "set path to configuration file", CommandOptionType.SingleValue );
+      var configOption = app.AddOption( "configuration", "c", "set path to configuration file", CommandOptionType.SingleValue );
 
       app.VersionOption( "-v|--version",
                         () =>

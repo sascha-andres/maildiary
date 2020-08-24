@@ -15,7 +15,7 @@ namespace MailDiary.Types.Content
     public string   Subject  { get; set; }
     public string   Content  { get; set; }
 
-    public string ToMarkdown()
+    public string ToMarkdown( string formatString )
     {
       if ( string.IsNullOrEmpty( Subject ) )
         throw new InvalidOperationException( "Subject may not be empty" );
@@ -23,7 +23,7 @@ namespace MailDiary.Types.Content
         throw new InvalidOperationException( "Content may not be empty" );
 
       return MarkDownTemplate
-             .Replace( "%%RECEIVED%%", Received.ToString("dd/MM/yyyy HH:mm:ss") )
+             .Replace( "%%RECEIVED%%", Received.ToString( formatString ) )
              .Replace( "%%SUBJECT%%",  Subject )
              .Replace( "%%CONTENT%%",  Content );
     }

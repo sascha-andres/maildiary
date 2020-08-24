@@ -21,9 +21,13 @@ namespace MailDiary.Types.Configuration
     // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
     public List<string> WhitelistedSenders { get; set; }
 
+    [YamlMember( Alias = "date-time-format", ApplyNamingConventions = false )]
+    public string DateTimeFormat { get; set; }
+
     public Processing()
     {
       WhitelistedSenders = new List<string>();
+      DateTimeFormat     = "dd/MM/yyyy HH:mm:ss";
     }
 
     /// <summary>

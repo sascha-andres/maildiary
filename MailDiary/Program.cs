@@ -5,7 +5,7 @@ namespace MailDiary
   using System.Reflection;
   using Commands;
   using Microsoft.Extensions.CommandLineUtils;
-  
+
   internal static class Program
   {
     private static void Main( string[] args )
@@ -17,20 +17,15 @@ namespace MailDiary
 
       app.HelpOption( "-?|-h|--help" );
 
-      var configOption = app.AddOption( "configuration", "c", "set path to configuration file", CommandOptionType.SingleValue );
+      var configOption = app.AddOption( "configuration", "c", "set path to configuration file",
+                                       CommandOptionType.SingleValue );
 
       app.VersionOption( "-v|--version",
                         () =>
                           $"Version {Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}" );
-      
+
       Process.Register( app, configOption );
       Validate.Register( app, configOption );
-
-      app.Command( "validate",
-                  ( command ) => {
-                    command.OnExecute( () => Validate.RunCommand( configOption ) );
-                  }
-                 );
 
       try {
         app.Execute( args );

@@ -39,7 +39,7 @@ content" )]
       var exceptionThrown = false;
       var markdown        = "";
       try {
-        markdown = incoming.ToMarkdown();
+        markdown = incoming.ToMarkdown("dd/MM/yyyy HH:mm:ss");
       } catch ( Exception ex ) {
         _testOutputHelper.WriteLine( ex.Message );
         exceptionThrown = true;

@@ -20,8 +20,10 @@
       if ( !Directory.Exists( completeFolder ) ) {
         Directory.CreateDirectory( completeFolder );
       }
+
       var filename = message.Data.Received.ToString( "HHmmss" ) + ".md";
-      File.WriteAllText( Path.Combine( completeFolder, filename),  message.Data.ToMarkdown() );
+      File.WriteAllText( Path.Combine( completeFolder, filename ),
+                        message.Data.ToMarkdown( _configuration.Processing.DateTimeFormat ) );
     }
   }
 }

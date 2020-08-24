@@ -14,7 +14,7 @@ namespace MailDiary.Commands
     /// </summary>
     /// <param name="cmdApp">Command line application</param>
     /// <param name="configOption">Global configuration option</param>
-    public static void Register( CommandLineApplication cmdApp, CommandOption configOption )
+    public static void RegisterValidate( this CommandLineApplication cmdApp, CommandOption configOption )
     {
       cmdApp.Command( "validate", c => {
                                     c.Description =

@@ -3,13 +3,14 @@
   using System;
   using System.ComponentModel;
   using Scriban;
+  using Types;
   using Types.Configuration;
   using Types.Mail;
 
   /// <summary>
   /// Used to create a text (markdown) representation of a message
   /// </summary>
-  public class Renderer
+  public class Renderer : IRenderer
   {
     private readonly Template      _template;
     private readonly Configuration _configuration;

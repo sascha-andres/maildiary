@@ -68,6 +68,8 @@
         <e p="Content" t="Include">
           <e p="Incoming.cs" t="Include" />
         </e>
+        <e p="IFilesystemHandler.cs" t="Include" />
+        <e p="IRenderer.cs" t="Include" />
         <e p="Mail" t="Include">
           <e p="IMailConnector.cs" t="Include" />
           <e p="MailMessage.cs" t="Include" />

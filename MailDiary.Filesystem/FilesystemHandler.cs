@@ -2,10 +2,11 @@
 {
   using System.IO;
   using Renderer;
+  using Types;
   using Types.Configuration;
   using Types.Mail;
 
-  public class FilesystemHandler
+  public class FilesystemHandler : IFilesystemHandler
   {
     private const    string        _FolderPattern   = "yyyy/MM/dd";
     private const    string        _FileNamePattern = "HHmmss";

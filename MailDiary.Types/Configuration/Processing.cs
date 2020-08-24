@@ -6,6 +6,7 @@ namespace MailDiary.Types.Configuration
   using System.Collections.Generic;
   using System.Linq;
   using System.Text.RegularExpressions;
+  using Microsoft.VisualBasic;
   using YamlDotNet.Serialization;
 
   /// <summary>
@@ -21,9 +22,18 @@ namespace MailDiary.Types.Configuration
     // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
     public List<string> WhitelistedSenders { get; set; }
 
+    [YamlMember( Alias = "date-time-format", ApplyNamingConventions = false )]
+    public string DateTimeFormat { get; set; }
+    [YamlMember( Alias = "template", ApplyNamingConventions = false )]
+    public string Template { get; set; }
+
     public Processing()
     {
       WhitelistedSenders = new List<string>();
+      DateTimeFormat     = "dd/MM/yyyy HH:mm:ss";
+      Template = @"## ({{received}}) {{subject}}
+
+{{content}}";
     }
 
     /// <summary>

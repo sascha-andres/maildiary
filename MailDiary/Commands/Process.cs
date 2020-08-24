@@ -12,8 +12,26 @@ namespace MailDiary.Commands
 
   public static class Process
   {
-    public static int RunCommand( CommandLineApplication app, CommandOption configOption,
-                                  CommandLineApplication process )
+    /// <summary>
+    /// Create the command and attach it to the command line application
+    /// </summary>
+    /// <param name="cmdApp">Command line application</param>
+    /// <param name="configOption">Global configuration option</param>
+    public static void Register( CommandLineApplication cmdApp, CommandOption configOption )
+    {
+      cmdApp.Command( "process", c => {
+                                   c.Description =
+                                     "Get mails and generate markdown file(s)";
+                                   var preserveMails = c.AddOption( "preserve-mails", "p",
+                                                                   "do not move mails to folders",
+                                                                   CommandOptionType.NoValue );
+                                   c.OnExecute(
+                                               () => RunCommand( configOption, preserveMails )
+                                              );
+                                 } );
+    }
+
+    private static int RunCommand( CommandOption configOption, CommandOption preserveMails )
     {
       var cfg = configOption.Value();
       if ( string.IsNullOrEmpty( cfg ) ) {
@@ -33,12 +51,14 @@ namespace MailDiary.Commands
         if ( config.Processing.IsWhiteListed( mail.SenderMail ) ) {
           try {
             filesystemHandler.Save( mail );
-            mailConnector.Whitelisted( mail );
+            if ( !preserveMails.HasValue() )
+              mailConnector.Whitelisted( mail );
           } catch ( Exception ex ) {
-            Console.WriteLine($"Error while writing mail: {ex.Message}");
+            Console.WriteLine( $"Error while writing mail: {ex.Message}" );
           }
         } else {
-          mailConnector.Unwanted( mail );
+          if ( !preserveMails.HasValue() )
+            mailConnector.Unwanted( mail );
         }
       }
 

@@ -15,6 +15,12 @@ namespace MailDiary.Types.Content
     public string   Subject  { get; set; }
     public string   Content  { get; set; }
 
+    /// <summary>
+    /// Generate markdown from data
+    /// </summary>
+    /// <param name="formatString">Used to format the datetime</param>
+    /// <returns></returns>
+    /// <exception cref="InvalidOperationException"></exception>
     public string ToMarkdown( string formatString )
     {
       if ( string.IsNullOrEmpty( Subject ) )

@@ -12,6 +12,11 @@ namespace MailDiary.Commands
 
   public static class Process
   {
+    /// <summary>
+    /// Create the command and attach it to the command line application
+    /// </summary>
+    /// <param name="cmdApp">Command line application</param>
+    /// <param name="configOption">Global configuration option</param>
     public static void Register( CommandLineApplication cmdApp, CommandOption configOption )
     {
       cmdApp.Command( "process", c => {

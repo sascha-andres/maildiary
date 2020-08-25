@@ -44,10 +44,10 @@ namespace MailDiary.Commands
       }
 
       Console.WriteLine( $"Using {cfg}" );
-      var config = Configuration.FromYamlFile( cfg );
+      var config = serviceProvider.GetService<IConfiguration>();
+      config.FromYamlFile( cfg );
 
       using var mailConnector = serviceProvider.GetService<IMailConnector>();
-      mailConnector.SetConfiguration( config.Mail );
       mailConnector.Start();
 
       var filesystemHandler = serviceProvider.GetService<IFilesystemHandler>();

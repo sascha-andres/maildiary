@@ -5,6 +5,8 @@ namespace MailDiary.Commands
 {
   using System;
   using Microsoft.Extensions.CommandLineUtils;
+  using Microsoft.Extensions.DependencyInjection;
+  using Types;
   using Types.Configuration;
 
   public static class Validate
@@ -14,18 +16,18 @@ namespace MailDiary.Commands
     /// </summary>
     /// <param name="cmdApp">Command line application</param>
     /// <param name="configOption">Global configuration option</param>
-    public static void RegisterValidate( this CommandLineApplication cmdApp, CommandOption configOption )
+    public static void RegisterValidate( this CommandLineApplication cmdApp, CommandOption configOption, ServiceProvider serviceProvider )
     {
       cmdApp.Command( "validate", c => {
                                     c.Description =
                                       "Validate configuration";
                                     c.OnExecute(
-                                                () => RunCommand( configOption )
+                                                () => RunCommand( configOption, serviceProvider )
                                                );
                                   } );
     }
 
-    private static int RunCommand( CommandOption configOption )
+    private static int RunCommand( CommandOption configOption, ServiceProvider serviceProvider )
     {
       var cfg = configOption.Value();
       if ( string.IsNullOrEmpty( cfg ) ) {
@@ -34,7 +36,9 @@ namespace MailDiary.Commands
       }
 
       Console.WriteLine( $"Using {cfg}" );
-      var config = Configuration.FromYamlFile( cfg );
+      var config = serviceProvider.GetService<IConfiguration>();
+      config.FromYamlFile( cfg );
+      
       try {
         config.Validate();
         Console.WriteLine( "configuration validated successfully" );

@@ -12,14 +12,14 @@
   /// </summary>
   public class Renderer : IRenderer
   {
-    private readonly Template      _template;
-    private readonly Configuration _configuration;
+    private readonly Template       _template;
+    private readonly IConfiguration _configuration;
 
     /// <summary>
     /// Constructor used to set things up
     /// </summary>
     /// <param name="configuration"></param>
-    public Renderer( Configuration configuration )
+    public Renderer( IConfiguration configuration )
     {
       _configuration = configuration;
       _template      = Template.Parse( configuration.Processing.Template );

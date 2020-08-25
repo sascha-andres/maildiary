@@ -1,26 +1,24 @@
 ﻿namespace MailDiary.Filesystem
 {
   using System.IO;
-  using Renderer;
   using Types;
-  using Types.Configuration;
   using Types.Mail;
 
   public class FilesystemHandler : IFilesystemHandler
   {
     private const    string        _FolderPattern   = "yyyy/MM/dd";
     private const    string        _FileNamePattern = "HHmmss";
-    private readonly Configuration _configuration;
-    private readonly Renderer      _renderer;
+    private readonly IConfiguration _configuration;
+    private readonly IRenderer      _renderer;
 
     /// <summary>
     /// Constructor taking the configuration to handle writes to the storage
     /// </summary>
     /// <param name="config"></param>
-    public FilesystemHandler( Configuration config )
+    public FilesystemHandler( IConfiguration config, IRenderer renderer )
     {
       _configuration = config;
-      _renderer = new Renderer( _configuration );
+      _renderer      = renderer;
     }
 
     /// <summary>

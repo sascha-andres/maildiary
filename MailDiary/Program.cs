@@ -20,7 +20,8 @@ namespace MailDiary
       ServiceProvider serviceProvider = new ServiceCollection()
                                         .AddSingleton<IFilesystemHandler, FilesystemHandler>()
                                         .AddSingleton<IMailConnector, ImapConnector.ImapConnector>()
-                                        .AddSingleton<IRenderer, Renderer.Renderer>() // I need a Configuration, but the config file path is passed using an option :(
+                                        .AddSingleton<IRenderer, Renderer.Renderer>()
+                                        .AddSingleton<IConfiguration, Configuration>()
                                         .BuildServiceProvider();
       
       var app = new CommandLineApplication {
@@ -38,7 +39,7 @@ namespace MailDiary
                           $"Version {Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}" );
 
       app.RegisterProcess( configOption, serviceProvider );
-      app.RegisterValidate( configOption );
+      app.RegisterValidate( configOption, serviceProvider );
 
       try {
         app.Execute( args );

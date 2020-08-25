@@ -35,6 +35,5 @@ namespace MailDiary.Types.Mail
     /// </summary>
     /// <returns>En Ienumerable to iterate over</returns>
     IEnumerable<MailMessage> GetMails();
-    void                     SetConfiguration( MailConfiguration mailConfiguration );
   }
 }

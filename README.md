@@ -39,6 +39,7 @@ Concatenation of generated markdown files is by design not part of this tool.
 
 |Version|Description|
 |---|---|
+||- assume all lowercase whiteliested emails|
 |1.1.0.0|- add renderer|
 ||- add preserve mails flag|
 ||- add ability to set date time format string|

@@ -13,9 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="chore: add first implementation try">
-      <change beforePath="$PROJECT_DIR$/MailDiary.Types/Configuration/Processing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MailDiary.Types/Configuration/Processing.cs" afterDir="false" />
-    </list>
+    <list default="true" id="f5ca5d26-d6dd-4037-a16e-8bd8929e53fe" name="Default Changelist" comment="feat: compare with lower case mail address" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +127,7 @@
       <workItem from="1598244842609" duration="23000" />
       <workItem from="1598275979444" duration="2231000" />
       <workItem from="1598331015511" duration="1962000" />
-      <workItem from="1598540485308" duration="45000" />
+      <workItem from="1598540485308" duration="229000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1598165732884</created>
@@ -250,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598293844821</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: compare with lower case mail address">
+      <created>1598540566505</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1598540566505</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +318,8 @@
     <MESSAGE value="feat: add configuration setting to provide date time format string&#10;&#10;Closes #2" />
     <MESSAGE value="chore: clean up code" />
     <MESSAGE value="chore: add first implementation try" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add first implementation try" />
+    <MESSAGE value="feat: compare with lower case mail address" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: compare with lower case mail address" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1383" y="383" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598332855873">
@@ -428,10 +434,11 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="1114" y="407" key="RollbackChangesDialog/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598293096793" />
-    <state x="872" y="437" key="Vcs.Push.Dialog.v2" timestamp="1598283599875">
-      <screen x="0" y="0" width="2560" height="1410" />
+    <state x="5583" y="869" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1598540569371">
+      <screen x="3840" y="0" width="5120" height="2880" />
     </state>
     <state x="872" y="437" key="Vcs.Push.Dialog.v2/-3840.0.2560.1420/0.0.2560.1410@0.0.2560.1410" timestamp="1598283599875" />
+    <state x="5583" y="869" width="802" height="523" key="Vcs.Push.Dialog.v2/0.0.3840.2160/3840.0.5120.2880@3840.0.5120.2880" timestamp="1598540569371" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -55,7 +55,7 @@ namespace MailDiary.Types.Configuration
     /// <returns>true if whitelisted</returns>
     public bool IsWhiteListed( string mail )
     {
-      return WhitelistedSenders.Contains( mail );
+      return WhitelistedSenders.Contains( mail.ToLower() );
     }
   }
 }

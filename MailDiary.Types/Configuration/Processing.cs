@@ -46,7 +46,11 @@ if tags.size > 0
     tagContent = tagContent + ""\n- "" + t
   end 
 end
-}}## ({{received}}) {{subject}}{{personContent}}{{tagContent}}
+inbetweenContent = """"
+if persons.size > 0 && tags.size > 0
+  inbetweenContent = ""\n""
+end
+}}## ({{received}}) {{subject}}{{personContent}}{{inbetweenContent}}{{tagContent}}
 
 {{content}}";
     }

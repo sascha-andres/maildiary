@@ -5,6 +5,7 @@ namespace MailDiaryTypes.Tests.Content
 {
   using System;
   using System.Globalization;
+  using System.Linq;
   using MailDiary.Renderer;
   using MailDiary.Types.Configuration;
   using MailDiary.Types.Content;
@@ -60,6 +61,52 @@ content" )]
       if ( !hasException ) {
         Assert.Equal( expectedMarkdown, markdown );
       }
+    }
+
+    [Fact]
+    public void TagsNotNull()
+    {
+      var msg = new MailMessage();
+      Assert.NotNull( msg.Data.Tags );
+    }
+
+    [Fact]
+    public void PeopleNotNull()
+    {
+      var msg = new MailMessage();
+      Assert.NotNull( msg.Data.Tags );
+    }
+    
+    [Theory]
+    [InlineData( "01/01/2000 01:01:01", "subject",       "content", false, 0 )]
+    [InlineData( "01/12/2000 01:01:01", "subject @test", "content", false, 1 )]
+    [InlineData( "01/12/2000 01:01:01", "subject @test @test2", "content", false, 2 )]
+    public void PersonsTest( string received, string subject, string content, bool hasException,
+                                         int numberOfPersons )
+    {
+      var msg = new MailMessage();
+      msg.Data.Content = content;
+      msg.Data.Received = DateTime.ParseExact( received, "dd/MM/yyyy HH:mm:ss",
+                                              CultureInfo.InvariantCulture );
+      msg.Data.Subject = subject;
+
+      Assert.Equal( numberOfPersons, msg.Data.Persons.Count() );
+    }
+    
+    [Theory]
+    [InlineData( "01/01/2000 01:01:01", "subject",              "content", false, 0 )]
+    [InlineData( "01/12/2000 01:01:01", "subject #test",        "content", false, 1 )]
+    [InlineData( "01/12/2000 01:01:01", "subject #test #test2", "content", false, 2 )]
+    public void TagsTest( string received, string subject, string content, bool hasException,
+                             int    numberOfTags )
+    {
+      var msg = new MailMessage();
+      msg.Data.Content = content;
+      msg.Data.Received = DateTime.ParseExact( received, "dd/MM/yyyy HH:mm:ss",
+                                              CultureInfo.InvariantCulture );
+      msg.Data.Subject = subject;
+
+      Assert.Equal( numberOfTags, msg.Data.Tags.Count() );
     }
   }
 }

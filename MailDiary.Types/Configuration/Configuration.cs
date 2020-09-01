@@ -2,20 +2,36 @@
 {
   using System;
   using System.IO;
+  using AutoMapper;
   using YamlDotNet.Serialization;
 
   /// <summary>
   /// Base configuration object
   /// </summary>
-  public class Configuration
+  public class Configuration : IConfiguration
   {
     [YamlMember( Alias = "mail", ApplyNamingConventions = false )]
-    public MailConfiguration Mail       { get; set; }
+    public MailConfiguration Mail { get; set; }
+
     [YamlMember( Alias = "processing", ApplyNamingConventions = false )]
-    public Processing        Processing { get; set; }
+    public Processing Processing { get; set; }
 
     [YamlMember( Alias = "markdown-base-path", ApplyNamingConventions = false )]
     public string MarkdownBasePath { get; set; }
+
+    /// <summary>
+    /// Configure mapper
+    /// </summary>
+    /// <returns>and return a new mapper</returns>
+    private IMapper getMapper()
+    {
+      var config = new MapperConfiguration( cfg => {
+                                              cfg.CreateMap<IConfiguration, Configuration>();
+                                              cfg.CreateMap<MailConfiguration, MailConfiguration>();
+                                              cfg.CreateMap<Processing, Processing>();
+                                            } );
+      return config.CreateMapper();
+    }
 
     /// <summary>
     /// Read configuration from a YAML file
@@ -24,7 +40,7 @@
     /// <returns>Configuration</returns>
     /// <exception cref="FileNotFoundException"></exception>
     /// <exception cref="ArgumentException"></exception>
-    public static Configuration FromYamlFile( string path )
+    public void FromYamlFile( string path )
     {
       var config       = new Configuration();
       var deserializer = new DeserializerBuilder().Build();
@@ -39,13 +55,14 @@
         if ( null == config ) {
           throw new ArgumentException( "configuration could not be deserialized" );
         }
+
+        var mapper = getMapper();
+        mapper.Map( config, this );
       } catch ( Exception ex ) {
         throw new InvalidConfigurationException( "could not deserialize", ex );
       }
 
-      config.Validate();
-
-      return config;
+      Validate();
     }
 
     /// <summary>

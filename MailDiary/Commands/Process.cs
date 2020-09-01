@@ -7,6 +7,8 @@ namespace MailDiary.Commands
   using Filesystem;
   using ImapConnector;
   using Microsoft.Extensions.CommandLineUtils;
+  using Microsoft.Extensions.DependencyInjection;
+  using Types;
   using Types.Configuration;
   using Types.Mail;
 
@@ -17,7 +19,8 @@ namespace MailDiary.Commands
     /// </summary>
     /// <param name="cmdApp">Command line application</param>
     /// <param name="configOption">Global configuration option</param>
-    public static void Register( CommandLineApplication cmdApp, CommandOption configOption )
+    public static void RegisterProcess( this CommandLineApplication cmdApp, CommandOption configOption,
+                                        ServiceProvider           serviceProvider )
     {
       cmdApp.Command( "process", c => {
                                    c.Description =
@@ -26,12 +29,13 @@ namespace MailDiary.Commands
                                                                    "do not move mails to folders",
                                                                    CommandOptionType.NoValue );
                                    c.OnExecute(
-                                               () => RunCommand( configOption, preserveMails )
+                                               () => RunCommand( configOption, preserveMails, serviceProvider )
                                               );
                                  } );
     }
 
-    private static int RunCommand( CommandOption configOption, CommandOption preserveMails )
+    private static int RunCommand( CommandOption   configOption, CommandOption preserveMails,
+                                   ServiceProvider serviceProvider )
     {
       var cfg = configOption.Value();
       if ( string.IsNullOrEmpty( cfg ) ) {
@@ -40,13 +44,13 @@ namespace MailDiary.Commands
       }
 
       Console.WriteLine( $"Using {cfg}" );
-      var config = Configuration.FromYamlFile( cfg );
+      var config = serviceProvider.GetService<IConfiguration>();
+      config.FromYamlFile( cfg );
 
-      using IMailConnector mailConnector = new ImapConnector();
-      mailConnector.SetConfiguration( config.Mail );
+      using var mailConnector = serviceProvider.GetService<IMailConnector>();
       mailConnector.Start();
 
-      var filesystemHandler = new FilesystemHandler( config );
+      var filesystemHandler = serviceProvider.GetService<IFilesystemHandler>();
       foreach ( var mail in mailConnector.GetMails() ) {
         if ( config.Processing.IsWhiteListed( mail.SenderMail ) ) {
           try {

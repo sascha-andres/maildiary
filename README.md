@@ -39,6 +39,9 @@ Concatenation of generated markdown files is by design not part of this tool.
 
 |Version|Description|
 |---|---|
+|1.2.0.0|- parse # as tag|
+||- parse @ as person|
+||- assume all lowercase whitelisted emails|
 |1.1.0.0|- add renderer|
 ||- add preserve mails flag|
 ||- add ability to set date time format string|

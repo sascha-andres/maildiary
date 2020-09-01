@@ -3,22 +3,23 @@
   using System;
   using System.ComponentModel;
   using Scriban;
+  using Types;
   using Types.Configuration;
   using Types.Mail;
 
   /// <summary>
   /// Used to create a text (markdown) representation of a message
   /// </summary>
-  public class Renderer
+  public class Renderer : IRenderer
   {
-    private readonly Template      _template;
-    private readonly Configuration _configuration;
+    private readonly Template       _template;
+    private readonly IConfiguration _configuration;
 
     /// <summary>
     /// Constructor used to set things up
     /// </summary>
     /// <param name="configuration"></param>
-    public Renderer( Configuration configuration )
+    public Renderer( IConfiguration configuration )
     {
       _configuration = configuration;
       _template      = Template.Parse( configuration.Processing.Template );
@@ -41,7 +42,9 @@
                                      message.Data.Subject,
                                      message.Data.Content,
                                      Received =
-                                       message.Data.Received.ToString( _configuration.Processing.DateTimeFormat )
+                                       message.Data.Received.ToString( _configuration.Processing.DateTimeFormat ),
+                                     message.Data.Persons,
+                                     message.Data.Tags
                                    } );
     }
   }

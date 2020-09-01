@@ -8,6 +8,7 @@ namespace MailDiary.ImapConnector
   using MailKit.Net.Imap;
   using MailKit.Search;
   using MailKit.Security;
+  using Types;
   using Types.Configuration;
   using Types.Mail;
 
@@ -15,19 +16,24 @@ namespace MailDiary.ImapConnector
   {
     private const string            ProcessedFolderName = "Processed";
     private const string            UnwantedFolderName  = "Unwanted";
-    private       MailConfiguration _mailConfiguration;
     private       ImapClient        _client;
     private       IMailFolder       _whiteListed;
     private       IMailFolder       _unwanted;
+    private       IConfiguration    _configuration;
 
+    public ImapConnector( IConfiguration configuration )
+    {
+      _configuration = configuration;
+    }
+    
     /// <summary>
     /// Connect to Imap server and prepare everything
     /// </summary>
     public void Start()
     {
       _client = new ImapClient();
-      _client.Connect( _mailConfiguration.Server, _mailConfiguration.Port, SecureSocketOptions.SslOnConnect );
-      _client.Authenticate( _mailConfiguration.User, _mailConfiguration.Password );
+      _client.Connect( _configuration.Mail.Server, _configuration.Mail.Port, SecureSocketOptions.SslOnConnect );
+      _client.Authenticate( _configuration.Mail.User, _configuration.Mail.Password );
       _client.Inbox.Open( FolderAccess.ReadWrite );
       
       foreach ( var folder in _client.Inbox.GetSubfolders() ) {
@@ -95,15 +101,6 @@ namespace MailDiary.ImapConnector
                                               }
                                      };
       }
-    }
-
-    /// <summary>
-    /// Used to pass in configuration settings
-    /// </summary>
-    /// <param name="mailConfiguration">Object containing config data</param>
-    public void SetConfiguration( MailConfiguration mailConfiguration )
-    {
-      _mailConfiguration = mailConfiguration;
     }
 
     /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>

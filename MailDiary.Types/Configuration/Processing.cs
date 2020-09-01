@@ -6,7 +6,6 @@ namespace MailDiary.Types.Configuration
   using System.Collections.Generic;
   using System.Linq;
   using System.Text.RegularExpressions;
-  using Microsoft.VisualBasic;
   using YamlDotNet.Serialization;
 
   /// <summary>
@@ -24,6 +23,7 @@ namespace MailDiary.Types.Configuration
 
     [YamlMember( Alias = "date-time-format", ApplyNamingConventions = false )]
     public string DateTimeFormat { get; set; }
+
     [YamlMember( Alias = "template", ApplyNamingConventions = false )]
     public string Template { get; set; }
 
@@ -31,7 +31,26 @@ namespace MailDiary.Types.Configuration
     {
       WhitelistedSenders = new List<string>();
       DateTimeFormat     = "dd/MM/yyyy HH:mm:ss";
-      Template = @"## ({{received}}) {{subject}}
+      Template = @"{{
+  personContent = """"
+if persons.size > 0
+  personContent = ""\nMentioned:""
+  for p in persons
+    personContent = personContent + ""\n- "" + p
+  end 
+end
+tagContent = """"
+if tags.size > 0
+  tagContent = ""\nTagged:""
+  for t in tags
+    tagContent = tagContent + ""\n- "" + t
+  end 
+end
+inbetweenContent = """"
+if persons.size > 0 && tags.size > 0
+  inbetweenContent = ""\n""
+end
+}}## ({{received}}) {{subject}}{{personContent}}{{inbetweenContent}}{{tagContent}}
 
 {{content}}";
     }
@@ -55,7 +74,7 @@ namespace MailDiary.Types.Configuration
     /// <returns>true if whitelisted</returns>
     public bool IsWhiteListed( string mail )
     {
-      return WhitelistedSenders.Contains( mail );
+      return WhitelistedSenders.Contains( mail.ToLower() );
     }
   }
 }

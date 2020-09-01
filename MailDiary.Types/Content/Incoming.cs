@@ -37,10 +37,15 @@ namespace MailDiary.Types.Content
     private void readPersons()
     {
       if ( !_regexPerson.IsMatch( _subject ) ) return;
-      var matches = _regexPerson.Matches( _subject );
+      var matches    = _regexPerson.Matches( _subject );
       for ( int i = 0; i < matches.Count; i++ ) {
-        Persons.Add( matches[ i ].Groups[ "person" ].Value );
+        var value = matches[ i ].Groups[ "person" ].Value;
+        Persons.Add( value );
       }
+      var newSubject = _regexPerson.Replace( _subject, "" );
+      newSubject = newSubject.Replace( "  ", " " );
+      newSubject = newSubject.Trim();
+      _subject   = newSubject;
     }
 
     private void readTags()
@@ -48,8 +53,13 @@ namespace MailDiary.Types.Content
       if ( !_regexTag.IsMatch( _subject ) ) return;
       var matches = _regexTag.Matches( _subject );
       for ( int i = 0; i < matches.Count; i++ ) {
-        Tags.Add( matches[ i ].Groups[ "tag" ].Value );
+        var value = matches[ i ].Groups[ "tag" ].Value;
+        Tags.Add( value );
       }
+      var newSubject = _regexTag.Replace( _subject, "" );
+      newSubject = newSubject.Replace( "  ", " " );
+      newSubject = newSubject.Trim();
+      _subject   = newSubject;
     }
   }
 }

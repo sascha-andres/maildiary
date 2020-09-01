@@ -42,7 +42,9 @@
                                      message.Data.Subject,
                                      message.Data.Content,
                                      Received =
-                                       message.Data.Received.ToString( _configuration.Processing.DateTimeFormat )
+                                       message.Data.Received.ToString( _configuration.Processing.DateTimeFormat ),
+                                     message.Data.Persons,
+                                     message.Data.Tags
                                    } );
     }
   }

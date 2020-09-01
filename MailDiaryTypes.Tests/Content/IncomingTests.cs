@@ -23,16 +23,45 @@ namespace MailDiaryTypes.Tests.Content
     }
 
     [Theory]
-    [InlineData( "01/01/2000 01:01:01", "subject", "content", false, @"## (01/01/2000 01:01:01) subject
+    [InlineData( "01/01/2000 01:01:01", "subject",       "content", false, @"## (01/01/2000 01:01:01) subject
 
 content" )]
-    [InlineData( "01/12/2000 01:01:01", "subject", "content", false, @"## (01/12/2000 01:01:01) subject
+    [InlineData( "01/12/2000 01:01:01", "subject",       "content", false, @"## (01/12/2000 01:01:01) subject
 
 content" )]
-    [InlineData( "01/12/2000 01:01:01", "",        "",        true,  @"## (01/12/2000 01:01:01) subject
+    [InlineData( "01/12/2000 01:01:01", "subject @test", "content", false, @"## (01/12/2000 01:01:01) subject
+Mentioned:
+- test
 
 content" )]
-    [InlineData( "01/12/2000 01:01:01", "subject", "",        true,  @"## (01/12/2000 01:01:01) subject
+    [InlineData( "01/12/2000 01:01:01", "subject @test @test2", "content", false, @"## (01/12/2000 01:01:01) subject
+Mentioned:
+- test
+- test2
+
+content" )]
+    [InlineData( "01/12/2000 01:01:01", "subject #test", "content", false, @"## (01/12/2000 01:01:01) subject
+Tagged:
+- test
+
+content" )]
+    [InlineData( "01/12/2000 01:01:01", "subject #test #test2", "content", false, @"## (01/12/2000 01:01:01) subject
+Tagged:
+- test
+- test2
+
+content" )]
+    [InlineData( "01/12/2000 01:01:01", "subject @test #test2", "content", false, @"## (01/12/2000 01:01:01) subject
+Mentioned:
+- test
+Tagged:
+- test2
+
+content" )]
+    [InlineData( "01/12/2000 01:01:01", "",              "",        true,  @"## (01/12/2000 01:01:01) subject
+
+content" )]
+    [InlineData( "01/12/2000 01:01:01", "subject",       "",        true,  @"## (01/12/2000 01:01:01) subject
 
 content" )]
     public void MarkdownGenerationTests( string received, string subject, string content, bool hasException,

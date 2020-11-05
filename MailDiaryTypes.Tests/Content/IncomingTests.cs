@@ -25,6 +25,11 @@ content")]
     [InlineData("01/12/2000 01:01:01", "subject", "content", false, @"## (01/12/2000 01:01:01) subject
 
 content")]
+    [InlineData("01/12/2000 01:01:01", "subject @WWW", "content", false, @"## (01/12/2000 01:01:01) subject
+Mentioned:
+- WWW
+
+content")]
     [InlineData("01/12/2000 01:01:01", "subject @test", "content", false, @"## (01/12/2000 01:01:01) subject
 Mentioned:
 - test

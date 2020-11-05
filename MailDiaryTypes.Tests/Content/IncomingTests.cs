@@ -1,4 +1,4 @@
-﻿// MailDiary - MailDiaryTypes.Tests - IncomingTests.cs
+// MailDiary - MailDiaryTypes.Tests - IncomingTests.cs
 // created on 2020/08/23
 
 namespace MailDiaryTypes.Tests.Content
@@ -32,6 +32,11 @@ content" )]
     [InlineData( "01/12/2000 01:01:01", "subject @test", "content", false, @"## (01/12/2000 01:01:01) subject
 Mentioned:
 - test
+
+content" )]
+    [InlineData( "01/12/2000 01:01:01", "subject @testTest", "content", false, @"## (01/12/2000 01:01:01) subject
+Mentioned:
+- test Test
 
 content" )]
     [InlineData( "01/12/2000 01:01:01", "subject @test @test2", "content", false, @"## (01/12/2000 01:01:01) subject

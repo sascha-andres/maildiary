@@ -39,6 +39,8 @@ Concatenation of generated markdown files is by design not part of this tool.
 
 |Version|Description|
 |---|---|
+|1.3.0.0|- Split camel case tags (TestTest => tag:Test Test)|
+||Framework version .NET 5|
 |1.2.0.0|- parse # as tag|
 ||- parse @ as person|
 ||- assume all lowercase whitelisted emails|
